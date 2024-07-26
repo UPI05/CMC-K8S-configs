@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: d1l1th1um
+  name: d1l1th1um-nginx 
+spec:
+  replicas: 2 
+  selector:
+    matchLabels:
+      app: d1l1th1um 
+  template:
+    metadata:
+      name: d1l1th1um-pod
+      labels:
+        app: d1l1th1um 
+    spec:
+      containers:
+      - name: nginx-container 
+        image: nginx:latest
+        ports:
+        - containerPort: 80
