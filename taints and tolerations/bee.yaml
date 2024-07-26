@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bee
+spec:
+  containers:
+  - image: nginx
+    name: test
+    ports:
+    - containerPort: 80
+  tolerations:
+  - key: "spray"
+    value: "mortein"
+    operator: "Equal"
+    effect: "NoSchedule"
