@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: d1l1th1um-rolebinding
+roleRef:
+  name: d1l1th1um-role
+  kind: Role
+subjects:
+  - name: d1l1th1um-token
+    kind: User
