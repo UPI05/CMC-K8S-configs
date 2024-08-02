@@ -1,0 +1,3 @@
+kubectl create serviceaccount d1l1th1um-token -n d1l1th1um
+kubectl create token d1l1th1um-token -n d1l1th1um --duration=1h > d1l1th1um.token
+=> Past this token into kubeconfig with the corresponding context

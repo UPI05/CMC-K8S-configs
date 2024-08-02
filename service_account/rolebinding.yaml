@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: d1l1th1um-rolebinding
+  namespace: d1l1th1um
+subjects:
+- kind: ServiceAccount
+  name: d1l1th1um-token
+roleRef:
+  kind: Role
+  name: d1l1th1um-role
+  apiGroup: rbac.authorization.k8s.io
